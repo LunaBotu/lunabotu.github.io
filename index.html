@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode().showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+<script>
+const options = {
+  bottom: '64px', // default: '32px'
+  right: 'unset', // if you want the widget to be on the right then `right: '32px' and left to unset
+  left: '32px', // default: 'unset'
+  time: '0.5s', // default: '0.5s' the time to fade in and out 
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#fff',  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: '#fff', // default: '#fff'
+  saveInCookies: false, // set to true if you want to load the site in the mode the user left it in
+  label: '🌓', // the emoji you want for toggling light and dark mode
+  autoMatchOsTheme: true // if you have enabled dark mode it would open darkmode
+}
+
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+</script>
+<html lang="tr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="propeller" content="da3fdafeb3a0f1ea42befd9f24edd1d3" />
+		<title>Luna</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="description" content="Luna is a multipurpose bot focused on giving users the features they ask for" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta property="og:title" content="Luna" />
+		<meta property="og:url" content="https://www.op.thedev.id/" />
+		<meta property="og:description" content="Luna is a multipurpose bot focused on giving users the features they ask for" />
+		<meta name="msapplication-TileColor" content="#2c75ff" />
+		<meta
+			name="keywords"
+			content="opbot, opbit, discord Luna, bot, network, cheesits, op, bit, best discord bot, 306018440639152128, 423637161632464906, global, chat"
+		/>
+		<meta property="og:type" content="object" />
+		<meta property="og:image" content="https://cdn.discordapp.com/avatars/848826210241740810/27b77b7810eca4d770e0a75cac7135a5.png" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<link rel="icon" sizes="192x192" href="images/icon.webp" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-title" content="Luna" /> 
+		<link rel="apple-touch-icon-precomposed" href="images/icon.webp" />
+		<meta name="msapplication-TileImage" content="https://www.op.thedev.id/images/icon.webp" />
+		<meta name="theme-color" content="#2c75ff" />
+		<link rel="shortcut icon" href="images/icon.webp" />
+		<meta name="abuseipdb-verification" content="VtHtNeUc" />
+
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="css/materialdesignicons.min.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/owl.carousel.min.css" />
+		<link rel="stylesheet" href="css/owl.theme.default.min.css" />
+		<link rel="stylesheet" href="css/pageclip.css" media="screen" />
+		<link rel="stylesheet" href="css/mobile.css">
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<!-- Loading animation -->
+		<div id="preloader">
+			<div id="status">
+				<div class="spinner">
+					<div class="double-bounce1"></div>
+					<div class="double-bounce2"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header -->
+		<header id="topnav" class="defaultscroll sticky">
+			<div class="container">
+				<!-- Logo -->
+				<div>
+					<a class="logo" href="#">LU<span class="text-primary">NA</span></a>
+				</div>
+
+				<!-- Invite Buttons -->
+			
+
+				<!-- Mobile Tray Toggle -->
+				<div class="menu-extras">
+					<div class="menu-item">
+						<a class="navbar-toggle">
+							<div class="lines">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<!-- Navigation -->
+
+				<!--
+        "New" badge for nav items:
+        <span class="badge badge-success nav-menu-right nav-menu-badge">New</span>
+      -->
+
+				<div id="navigation">
+					<ul class="navigation-menu">
+						<!-- Mobile Invites -->
+						<li class="show-mobile buy-button">
+							<span><a href="https://discord.com/oauth2/authorize?client_id=964617291503370352&permissions=8&scope=bot" target="_blank" class="btn btn-block btn-primary">Botu Ekle</a></span>
+						</li>
+						<li class="show-mobile buy-button">
+							<span><a href="https://discord.gg/lunabots" target="_blank" class="btn btn-block btn-outline-primary">Sunucuya Katıl</a></span>
+							<hr style="opacity: 25%; margin-top: 10px; margin-bottom: 10px" />
+						</li>
+
+						<!-- Nav Row 1 -->
+						<li><a class="text-primary">Home</a></li>
+
+						<!-- Nav Row 2 -->
+						
+
+						<!-- Nav Row 3 -->
+						<li class="has-submenu">
+							<a>Docs</a><span class="menu-arrow"></span>
+							<ul class="submenu">
+								<hr style="opacity: 25%; margin: 20px; margin-top: 10px; margin-bottom: 10px" />
+								<li>
+									<a href="https://github.com/TheMacDeveloper" target="_blank"
+										>License<span class="mdi mdi-open-in-new rem-1 nav-menu-right nav-menu-icon"></span
+									></a>
+								</li>
+								<li>
+									<a href="https://discord.gg/lunabots" target="_blank"
+										>EULA<span class="mdi mdi-open-in-new rem-1 nav-menu-right nav-menu-icon"></span
+									></a>
+								</li>
+							</ul>
+						</li>
+
+						<!-- Nav Row 4 -->
+						<li class="has-submenu">
+							<a>Oy Ver</a><span class="menu-arrow"></span>
+							<ul class="submenu">
+								<li><a href="https://dcsv.me/en/bots/964617291503370352?alert=new" target="_blank">dcsv.me/</a></li>
+								<li><a href="https://top.gg/bot/964617291503370352/vote" target="_blank">top.gg</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<!-- Jumbotron -->
+		<section class="bg-half-170" id="home">
+			<div class="home-center">
+				<div class="home-desc-center">
+					<div class="container">
+						<div class="row align-items-center">
+							<!-- Coloumn 1 -->
+							<div class="col-lg-6 col-md-7">
+								<div class="title-heading mt-4">
+									<h1 class="heading mb-3">Sunucunuzu <span class="text-primary">Luna</span><h1 class="heading mb-3">ile yönetin</h1>
+									<p class="para-desc text-muted">
+										Aklınıza gelebilecek hemen hemen her özelliğin yanı sıra özel personeli ve aktif destek ekibiyle Luna, tüm Discord sunucularına 
+										mükemmel bir eklentidir. <span class="text-primary">Daha fazlasını öğrenmek için aşağı kaydırın. . .</span>
+									</p>
+								</div>
+							</div>
+
+							<!-- Column 2 -->
+							<div class="col-lg-6 col-md-5 mt-4 pt-2 mt-sm-0 pt-sm-0 hide-mobile">
+								<video autoplay loop muted playsinline width="100% 100%" class="img-fluid mx-auto d-block">
+									<source src="images/kurbilgi.mp4" type="video/mp4" />
+									<source src="images/kurbilgi.mp4" type="video/mp4" />
+								</video>
+							</div>
+						</div>
+					</div>
+
+					<!-- Background Design Image -->
+					<div class="container-fluid">
+						<div class="row">
+							<div class="home-shape-bottom">
+								<img src="images/shapes/round-light.webp" alt="" loading="lazy" class="img-fluid mx-auto d-block" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Statistics -->
+		<section class="section bg-light">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 text-center">
+						<!-- Title and Description -->
+						<div class="section-title mb-60">
+							<h4 class="main-title mb-4">İstatistik</h4>
+							<p class="text-muted para-desc mb-0 mx-auto">
+								Aşağıdaki istatistikler özel bir API'den canlı olarak alınmıştır ve bu projenin ölçeğini göstermek için buradadır.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Set up 2 columns -->
+				<div class="row justify-content-center align-items-center">
+					<div class="col-lg-8 col-md-8">
+						<div class="row">
+							<!-- Stat Column 1 -->
+							<div class="col-md-6 col-12">
+								<div class="features p-1 pt-4 pb-4">
+									<i class="mdi mdi-account icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
+									<div class="content d-block overflow-hidden">
+										<h4 class="title">9175+<span id="stats-members"></span> Üyeler</h4>
+										<p class="text-muted para mb-0">Luna ile sunucu paylaşan her kullanıcının toplamı.</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- Stat Column 2 -->
+							<div class="col-md-6 col-12">
+								<div class="features p-1 pt-4 pb-4">
+									<i class="mdi mdi-server icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
+									<div class="content d-block overflow-hidden">
+										<h4 class="title"><span id="stats-servers">49+</span> Sunucu</h4>
+										<p class="text-muted para mb-0">Luna'nın bulunduğu toplam sunucu sayısı.</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- Stat Column 3 -->
+							<div class="col-md-6 col-12">
+								<div class="features p-1 pt-4 pb-4">
+									<i class="mdi mdi-code-greater-than icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
+									<div class="content d-block overflow-hidden">
+										<h4 class="title"><span id="stats-commands">41</span> Commands</h4>
+										<p class="text-muted para mb-0">Luna'nın sahip olduğu toplam komut sayısı.</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- Stat Column 4 -->
+							<div class="col-md-6 col-12">
+								<div class="features p-1 pt-4 pb-4">
+									<i class="mdi mdi-chart-line icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
+									<div class="content d-block overflow-hidden">
+										<h4 class="title"><span id="stats-ads">54%</span> Büyüme oranı</h4>
+										<p class="text-muted para mb-0">Luna'nın büyüme yüzdesi</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- Stat Column 5 -->
+							<div class="col-md-6 col-12">
+								<div class="features p-1 pt-4 pb-4">
+									<i class="mdi mdi-message icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
+									<div class="content d-block overflow-hidden">
+										<h4 class="title"><span id="stats-global-channels">3821+</span> Toplam Kanallar</h4>
+										<p class="text-muted para mb-0">Bağlı toplam kanal sayısı.</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- Stat Column 6 -->
+							<div class="col-md-6 col-12">
+								<div class="features p-1 pt-4 pb-4">
+									<i class="mdi mdi-gavel icon text-center rounded-pill text-primary mr-3 mt-2 float-left"></i>
+									<div class="content d-block overflow-hidden">
+										<h4 class="title"><span id="stats-global-bans">25+</span> Kara listede</h4>
+										<p class="text-muted para mb-0">Kara listeye alınan toplam kullanıcı sayısı</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Features -->
+		<section class="section pt-0 bg-light">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 text-center">
+						<!-- Title and Description -->
+						<div class="section-title mb-60">
+							<h4 class="main-title mb-4">Özellikler</h4>
+							<p class="text-muted para-desc mb-0 mx-auto">
+								Aşağıdaki özelliklerin tümüne ve daha fazlasına sahip olmak için <span class="text-primary font-weight-bold">Luna</span> 'yı sunucunuza ekleyin!
+							</p>
+
+							<div class="row mt-4 justify-content-center">
+								<div class="col-lg-8 col-md-12 text-center">
+									<ul class="nav nav-pills nav-justified flex-column flex-sm-row" id="pills-tab" role="tablist">
+										<!-- Pill 1 Button -->
+									
+
+										<!-- Pill 2 Button -->
+										<li class="nav-item mt-4 pt-2">
+											<a
+												class="nav-link rounded"
+												id="pills-games-tab"
+												data-toggle="pill"
+												href="#pills-games"
+												role="tab"
+												aria-controls="pills-games"
+												aria-selected="false"
+											>
+												<div class="text-center pt-1 pb-1">
+													<h4 class="title font-weight-normal mb-0">Kayıt</h4>
+												</div>
+											</a>
+										</li>
+
+										<!-- Pill 3 Button -->
+										<li class="nav-item mt-4 pt-2">
+											<a
+												class="nav-link rounded"
+												id="pills-mod-tab"
+												data-toggle="pill"
+												href="#pills-mod"
+												role="tab"
+												aria-controls="pills-mod"
+												aria-selected="false"
+											>
+												<div class="text-center pt-1 pb-1">
+													<h4 class="title font-weight-normal mb-0">Moderasyon</h4>
+												</div>
+											</a>
+										</li>
+
+										<!-- Pill 4 Button -->
+										<li class="nav-item mt-4 pt-2">
+											<a
+												class="nav-link rounded"
+												id="pills-more-tab"
+												data-toggle="pill"
+												href="#pills-more"
+												role="tab"
+												aria-controls="pills-more"
+												aria-selected="false"
+											>
+												<div class="text-center pt-1 pb-1">
+													<h4 class="title font-weight-normal mb-0">Üye Komutları</h4>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-12">
+						<div class="tab-content" id="pills-tabContent">
+							<!-- Pill 1 -->
+							<div class="tab-pane fade show active" id="pills-giveaways" role="tabpanel" aria-labelledby="pills-ads-tab">
+								<div class="row align-items-center">
+									<div class="col-md-6 hide-mobile">
+										<img src="images/pattern.webp" loading="lazy" class="img-fluid mx-auto d-block" alt="" />
+									</div>
+
+									<!-- Pill 1 Content -->
+									<div class="col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+										<div class="section-title">
+											<h4 class="title mb-4"><i class="mdi mdi-chevron-double-right text-primary"></i> Luna ile Sunucunuzu Yönetin</h4>
+											<p class="text-muted">
+												Luna, kayıt, moderasyon ve eğlence komutlarıyla donatılmış çok yönlü bir bottur. Sunucunuzun düzenini sağlamak ve üyelerinize eğlenceli anlar yaşatmak için ihtiyacınız olan her şeyi sunar.
+											</p>
+											<ul class="list-unstyled feature-list text-muted">
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Kolay kullanımlı kayıt sistemi ile yeni üyelerinizi hızlıca kaydedin
+												</li>
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Gelişmiş moderasyon komutları ile sunucunuzu sorunsuz bir şekilde yönetin
+												</li>
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Eğlenceli komutlar ile üyelerinizin keyifli vakit geçirmesini sağlayın
+												</li>
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Özelleştirilebilir ayarlar ile sunucunuz için en uygun deneyimi oluşturun
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<!-- Pill 2 -->
+							<div class="tab-pane fade" id="pills-games" role="tabpanel" aria-labelledby="pills-games-tab">
+								<div class="row align-items-center">
+									<div class="col-md-6 hide-mobile">
+										<img src="images/pattern.webp" loading="lazy" class="img-fluid mx-auto d-block" alt="" />
+									</div>
+							
+									<!-- Pill 2 Content -->
+									<div class="col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+										<div class="section-title">
+											<h4 class="title mb-4"><i class="mdi mdi-chevron-double-right text-primary"></i> Kayıt sistemi ile kullanıcıları kolaylıkla kayıt edebilirsiniz</h4>
+											<p class="text-muted">
+												Luna Bot, sunucunuzdaki kayıt işlemlerini kolaylaştıran ve otomatikleştiren gelişmiş bir kayıt sistemine sahiptir. Kullanıcı dostu arayüzü ve zengin özellikleri ile sunucu yöneticilerine ve kullanıcılara benzersiz bir deneyim sunar.
+											</p>
+											<ul class="list-unstyled feature-list text-muted">
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Global Name özelliği ile, Luna Bot kullanıcıları başka bir sunucuda kayıt olduklarında bile, o isimleri görebilir ve takip edebilirsiniz.
+												</li>
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>İsim değiştirme komutu ile kullanıcılar kolayca isimlerini güncelleyebilir ve sunucu içindeki kimliklerini yönetebilirler.
+												</li>
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Top teyit listesi, sunucunuzdaki en aktif kayıtçıları gösterir, böylece en çok katkıda bulunanları ödüllendirebilirsiniz.
+												</li>
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Teyit komutları ile yeni kullanıcıları hızlı ve etkili bir şekilde kaydedebilir, sunucunuzun düzenini ve güvenliğini sağlayabilirsiniz.
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Pill 3 -->
+							<div class="tab-pane fade" id="pills-mod" role="tabpanel" aria-labelledby="pills-mod-tab">
+								<div class="row align-items-center">
+									<div class="col-md-6 hide-mobile">
+										<img src="images/pattern.webp" loading="lazy" class="img-fluid mx-auto d-block" alt="" />
+									</div>
+
+									<!-- Pill 3 Content -->
+									<div class="col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+										<div class="section-title">
+											<h4 class="title mb-4"><i class="mdi mdi-chevron-double-right text-primary"></i> Güçlü Moderasyon</h4>
+											<p class="text-muted">
+												Luna, sunucunuzu istediğiniz şekilde tutmanıza yardımcı olacak geniş bir moderasyon komutları ve işlevleri listesine sahiptir.
+											</p>
+											<ul class="list-unstyled feature-list text-muted">
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Yeni kullanıcılara otomatik olarak belirlenen bir rol verme
+												</li>
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Bir komutla kullanıcıları banlama, jail'e atma veya uyarma
+												</li>
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Belirlediğiniz kelimeleri/fraseleri içeren mesajları otomatik olarak silme
+												</li>
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Üyeler katıldığında veya ayrıldığında karşılama/veda mesajları ayarlama
+												</li>
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Sunucunuz için canlı istatistik izleyici kurma
+												</li>
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Tüm sunucu aktivitesini belirlenen bir kanala otomatik olarak kaydetme
+												</li>
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Büyük miktarda mesajı toplu olarak silme
+												</li>
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Yetki verme ve alma, premium özellikler verme ve alma, kanal kilit komutları
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Pill 4 -->
+							<div class="tab-pane fade" id="pills-more" role="tabpanel" aria-labelledby="pills-more-tab">
+								<div class="row align-items-center">
+									<div class="col-md-6 hide-mobile">
+										<img src="images/pattern.webp" loading="lazy" class="img-fluid mx-auto d-block" alt="" />
+									</div>
+
+									<!-- Pill 4 -->
+									<div class="col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">
+										<div class="section-title">
+											<h4 class="title mb-4"><i class="mdi mdi-chevron-double-right text-primary"></i> Kişiselleştirilmiş Etkileşimler</h4>
+											<p class="text-muted">Luna, kullanıcı deneyimini zenginleştiren kişiselleştirilmiş komutlarla doludur.</p>
+											<ul class="list-unstyled feature-list text-muted">
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Avatar ve banner komutları ile kullanıcıların profil görsellerini ve bannerlarını görüntüleyin
+												</li>
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Ship komutu ile iki kullanıcının uyumluluğunu test edin
+												</li>
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>İlgiver ve iltifat komutları ile sunucu içinde pozitif bir atmosfer yaratın
+												</li>
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Git ve çek komutları ile kullanıcıları sesli kanallar arasında kolayca yönlendirin
+												</li>
+												<li>
+													<i class="mdi mdi-checkbox-marked-circle text-success h4 mr-2"></i>Ve daha fazlası!
+												</li>
+											</ul>
+										</div>
+									</div>
+
+			<!-- Background Image -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="home-shape-bottom">
+						<img src="images/shapes/round-white.webp" alt="" loading="lazy" class="img-fluid mx-auto d-block" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<br /><br /><br />
+
+		
+			<!-- Background Image -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="home-shape-bottom">
+						<img src="images/shapes/round-dark.webp" alt="" loading="lazy" class="img-fluid mx-auto d-block" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="footer footer-bar">
+			<div class="container text-center">
+				<div class="row align-items-end">
+					<!-- Column 1 -->
+					<div class="col-sm-3 text-sm-left">
+						<h1 class="text-light mb-0">LU<span class="text-primary">NA</span></h1>
+						<div class="small">© <span id="copyright-year"></span> macallan.</div>
+						<div class="pt-4 pb-4 text-light">
+							<div><i class="mdi mdi-github-circle"></i> <a href="https://github.com/TheMacDeveloper" target="_blank" class="text-foot">GitHub</a></div>
+							<div><i class="mdi mdi-email"></i> <a href="mailto:tejas22feb@gmail.com" target="_blank" class="text-foot">Email</a></div>
+						</div>
+						<a href="https://discord.gg/lunabots" target="_blank" class="btn btn-block btn-primary">Donate</a>
+					</div>
+
+					<!-- Column 2 -->
+					<div class="col-sm-5"></div>
+
+					<!-- Column 3 -->
+					<div class="col-sm-4 pt-2">
+						<a href="https://discord.gg/lunabots target="_blank" class="btn btn-block btn-primary">Discord Server</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<!-- JavaScript -->
+		<script type="text/javascript" src="js/mobileCheck.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/jquery.easing.min.js"></script>
+		<script src="js/owl.carousel.min.js "></script>
+		<script src="js/owl.init.js "></script>
+		<script src="js/app.js"></script>
+		<script src="js/script.js"></script>
+		<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+	</body>
+
+
+	
+</html>
