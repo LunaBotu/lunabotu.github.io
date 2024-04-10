@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/commands.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="shortcut icon" href="../img/icon.webp" type="image/x-icon">
+    <title>Luna Bot Komutları</title>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <div class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container">
+            <a href="../index.html" class="navbar-brand text-info">Luna Bot</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainmenu"><span
+                    class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="mainmenu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Ana Sayfa</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="linksdrop" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Komutlar</a>
+                        <ul class="dropdown-menu bg-dark" aria-labelledby="linksdrop">
+                            <li><a class="dropdown-item text-muted" href="./commands.html">Luna Bot Komutları</a></li>
+                            <li><a class="dropdown-item text-muted" href="./guard.html">Luna Guard Bot Komutları</a></li>
+                    
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="linksdrop" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Links</a>
+                        <ul class="dropdown-menu bg-dark" aria-labelledby="linksdrop">
+                            <li><a class="dropdown-item text-muted" href="https://discord.com/oauth2/authorize?client_id=964617291503370352&permissions=8&scope=bot">Luna Ekle</a></li>
+                            <li><a class="dropdown-item text-muted" href="https://discord.com/oauth2/authorize?client_id=1223556450287226920&permissions=8&scope=bot">Luna Guard Ekla</a></li>
+                            <li><a class="dropdown-item text-muted" href="https://discord.com/oauth2/authorize?client_id=1223556450287226920&permissions=8&scope=bot">Luna AI</a></li>
+                            <li><a class="dropdown-item text-muted" href="https://discord.gg/lunabots">Support Server</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="linksdrop" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Oy ver</a>
+                        <ul class="dropdown-menu bg-dark" aria-labelledby="linksdrop">
+                            <li><a class="dropdown-item text-muted" href="https://top.gg/bot/964617291503370352/vote">Luna top.gg</a></li>
+                            <li><a class="dropdown-item text-muted" href="https://dcsv.me/en/bots/964617291503370352?alert=new">Luna Dcsv.me</a></li>
+                            <li><a class="dropdown-item text-muted" href="https://top.gg/bot/1223556450287226920/vote">Luna Guard top.gg</a></li>
+                            <li><a class="dropdown-item text-muted" href="https://top.gg/bot/1208735099680464927/vote">Luan AI top.gg</a></li>
+                        </ul>
+                    </li>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section style="margin-top: 9%;">
+            <div class="row">
+                <div class="col-sm-6 my-1">
+                    <h2 class="fw-bold">Luna Bot Komutları</h2>
+                    <p class="command-descreption">İhtiyacınız olan tüm Luna bot komutlarını ve bilgilerini hızlı ve kolay bir şekilde bulun</p>
+                </div>
+                <div class="col-sm-6 my-1">
+                    <script async
+                        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4050940490843957"
+                        crossorigin="anonymous"></script>
+                    <!-- banner -->
+                    <ins class="adsbygoogle" style="display:inline-block;width:100%;height:90px"
+                        data-ad-client="ca-pub-4050940490843957" data-ad-slot="6770580457"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <div class="mt-4"></div>
+        <div class="row">
+            <div class="col-md-4 my-2">
+                <div class="card p-3">
+                    <h5>Komutlar Kategorisini Seçin</h5>
+                    <hr />
+                    <button onclick="active(this)" id="CategoryBtnAll"
+                        class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i
+                            class="fad fa-icons ttt"></i>&nbsp; Tüm Komutlar</button>
+
+                    <button onclick="active(this)" id="CategoryBtn0"
+                        class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-gift ttt'></i>&nbsp;
+                        Moderasyon Komutları</button>
+
+                    <button onclick="active(this)" id="CategoryBtn1"
+                        class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i
+                            class='fas fa-globe-europe ttt'></i>&nbsp; Kayıt Komutları</button>
+
+                    <button onclick="active(this)" id="CategoryBtn2"
+                        class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i
+                            class='fas fa-hammer-war ttt'></i>&nbsp;&nbsp; Kullanıcı Komutları</button>
+
+                    <button onclick="active(this)" id="CategoryBtn3"
+                        class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i
+                            class='fas fas fa-crown ttt'></i>&nbsp;&nbsp; Kurucu Komutları</button>
+
+                </div>
+            </div>
+            <div class="col-md-8 my-2">
+                <input type="text" class="w-100 search-box" oninput="search(this.value)"
+                    placeholder="Komutları ara" />
+
+
+                <div class="mt-4"></div>
+
+                <div class="commands-section" id="Category0">
+
+
+                    <div class="accordion accordion-flush mt-2" id="ban">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fban">
+                                    .ban&nbsp; <span class="command-descreption">- Sunucudan üyüyi yasaklar</span>
+                                </button>
+                            </h2>
+                            <div id="fban" class="accordion-collapse collapse" data-bs-parent="#ban">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .ban @Üye/ID Sebeb<br>
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush mt-2" id="unban">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#funban">
+                                    .unban&nbsp; <span class="command-descreption">- Sunucudan üyüyinin yaşağını kaldırır</span>
+                                </button>
+                            </h2>
+                            <div id="funban" class="accordion-collapse collapse" data-bs-parent="#unban">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .unban @ID <br>
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="kick">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fkick">
+                                    .jail&nbsp; <span class="command-descreption">- Üyeyi sunucu içinde yasaklar</span>
+                                </button>
+                            </h2>
+                            <div id="fkick" class="accordion-collapse collapse" data-bs-parent="#kick">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .jail @Üye/ID Sebeb
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="unkick">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#funkick">
+                                    .unjail&nbsp; <span class="command-descreption">- Üyeyi sunucu içindeki yasağı kaldırır</span>
+                                </button>
+                            </h2>
+                            <div id="funkick" class="accordion-collapse collapse" data-bs-parent="#unkick">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .jail @Üye/ID 
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion accordion-flush mt-2" id="mute">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fmute">
+                                    .mute&nbsp; <span class="command-descreption">- Ses ve Chat kanallarında susturur (Timeout)</span>
+                                </button>
+                            </h2>
+                            <div id="fmute" class="accordion-collapse collapse" data-bs-parent="#mute">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .mute @Üye/ID Sebeb
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="reklam">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#freklam">
+                                    .reklam&nbsp; <span class="command-descreption">- Reklam yapan kullanıcıları kanıtlı bir şekilde cezaya atar</span>
+                                </button>
+                            </h2>
+                            <div id="freklam" class="accordion-collapse collapse" data-bs-parent="#reklam">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+    
+                                        .reklam @Üye/ID (Mesajı Göderdikten sonra 2Dakka içinde Reklam SS Chat kanalına atın)
+    
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion accordion-flush mt-2" id="say">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fsay">
+                                    .say&nbsp; <span class="command-descreption">- Sunucu Üye Ses Ve Booster Bilgi</span>
+                                </button>
+                            </h2>
+                            <div id="fsay" class="accordion-collapse collapse" data-bs-parent="#say">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+    
+                                        .say 
+    
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+
+                <div class="commands-section" id="Category1">
+
+
+                    <div class="accordion accordion-flush mt-2" id="kayıt">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fkayıt">
+                                    .kayıt&nbsp; <span class="command-descreption">- Cinsiyet Kayıt</span>
+                                </button>
+                            </h2>
+                            <div id="fkayıt" class="accordion-collapse collapse" data-bs-parent="#kayıt">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .kayıt @Üye/ID İsim Yaş (Kısaltma Olarak ".e",".k" şeklinde yapabilirsin)
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush mt-2" id="isim">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fisim">
+                                    .isim&nbsp; <span class="command-descreption">- Kullanıcının ismini değiştirmek için kullanılır</span>
+                                </button>
+                            </h2>
+                            <div id="fisim" class="accordion-collapse collapse" data-bs-parent="#isim">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .isim @Üye/ID İsim Yaş
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush mt-2" id="isimler">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fisimler">
+                                    .isimler&nbsp; <span class="command-descreption">- Kişinin geçmiş isimlerini gösterir</span>
+                                </button>
+                            </h2>
+                            <div id="fisimler" class="accordion-collapse collapse" data-bs-parent="#isimler">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .isimler @Üye/ID <br>
+                                        Not: Luna Botla Hangi sunucuda kayıt olduysa başka sunucudaki bilgilerini de gösterir 
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush mt-2" id="kayıtbilgi">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fkayıtbilgi">
+                                    .kayıtbilgi&nbsp; <span class="command-descreption">- Kullanıcının teyit bilgilerini gösterir</span>
+                                </button>
+                            </h2>
+                            <div id="fkayıtbilgi" class="accordion-collapse collapse" data-bs-parent="#kayıtbilgi">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .kayıtbilgi @Üye/ID 
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush mt-2" id="topteyit">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#ftopteyit">
+                                    .topteyit&nbsp; <span class="command-descreption">- Kayıt sıralamasını gösterir.</span>
+                                </button>
+                            </h2>
+                            <div id="ftopteyit" class="accordion-collapse collapse" data-bs-parent="#topteyit">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .topteyit 
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+           
+
+                    <div class="accordion accordion-flush mt-2" id="kayıtsız">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fkayıtsız">
+                                    .kayıtsız&nbsp; <span class="command-descreption">- Kullanıcıyı kayıtsıza atar.</span>
+                                </button>
+                            </h2>
+                            <div id="fkayıtsız" class="accordion-collapse collapse" data-bs-parent="#kayıtsız">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .kayıtsız @Üye/ID 
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="commands-section" id="Category2">
+
+
+                    <div class="accordion accordion-flush mt-2" id="afk">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fafk">
+                                    .afk&nbsp; <span class="command-descreption">- Afk komutu
+                                    </span>
+                                </button>
+                            </h2>
+                            <div id="fafk" class="accordion-collapse collapse" data-bs-parent="#afk">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .afk Sebeb
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush mt-2" id="avatar">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#favatar">
+                                    .avatar&nbsp; <span class="command-descreption">- Avatar Komutu
+                                    </span>
+                                </button>
+                            </h2>
+                            <div id="favatar" class="accordion-collapse collapse" data-bs-parent="#avatar">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .avatar @Üye/ID
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+   
+                    <div class="accordion accordion-flush mt-2" id="banner">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fbanner">
+                                    .banner&nbsp; <span class="command-descreption">- Banner Komutu
+                                    </span>
+                                </button>
+                            </h2>
+                            <div id="fbanner" class="accordion-collapse collapse" data-bs-parent="#banner">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .banner @Üye/ID
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush mt-2" id="ship">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fship">
+                                    .ship &nbsp; <span class="command-descreption">- Aşk ölçer komutu
+                                    </span>
+                                </button>
+                            </h2>
+                            <div id="fship" class="accordion-collapse collapse" data-bs-parent="#ship">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .ship  @Üye/ID
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush mt-2" id="zengin">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fzengin">
+                                    .zengin &nbsp; <span class="command-descreption">- Booster Nink Değiştirme Komutu
+                                    </span>
+                                </button>
+                            </h2>
+                            <div id="fzengin" class="accordion-collapse collapse" data-bs-parent="#zengin">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .zengin  @Üye/ID
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush mt-2" id="çek">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fçek">
+                                    .çek &nbsp; <span class="command-descreption">- Kullanıcıyı çekmek için kullanılır.
+                                    </span>
+                                </button>
+                            </h2>
+                            <div id="fçek" class="accordion-collapse collapse" data-bs-parent="#çek">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .çek @Üye/ID 
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush mt-2" id="git">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fgit">
+                                    .git &nbsp; <span class="command-descreption">- Kullanıcıya gitmek için kullanılır.
+                                    </span>
+                                </button>
+                            </h2>
+                            <div id="fgit" class="accordion-collapse collapse" data-bs-parent="#git">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .git @Üye/ID 
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion accordion-flush mt-2" id="ilgiver">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#filgiver">
+                                    .ilgiver &nbsp; <span class="command-descreption">- Kullanıcıya ilgivermek için kullanılır.
+                                    </span>
+                                </button>
+                            </h2>
+                            <div id="filgiver" class="accordion-collapse collapse" data-bs-parent="#ilgiver">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .ilgiver @üye/ID 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush mt-2" id="tag">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#ftag">
+                                    .tag &nbsp; <span class="command-descreption">- Sunucu tagını gözterir.
+                                    </span>
+                                </button>
+                            </h2>
+                            <div id="ftag" class="accordion-collapse collapse" data-bs-parent="#tag">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .tag 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush mt-2" id="yardım">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fyardım">
+                                    .yardım &nbsp; <span class="command-descreption">- Bot komut listesi.
+                                    </span>
+                                </button>
+                            </h2>
+                            <div id="fyardım" class="accordion-collapse collapse" data-bs-parent="#yardım">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .yardım 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="commands-section" id="Category3">
+
+
+                    <div class="accordion accordion-flush mt-2" id="reactionrole">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#freactionrole">
+                                    
+                                    .kur bilgi &nbsp; <span class="command-descreption">- Sunucu rol ve log kanallarını
+                                        ayarlıya bilirsiniz</span>
+                                </button>
+                            </h2>
+                            <div id="freactionrole" class="accordion-collapse collapse" data-bs-parent="#reactionrole">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        Tag Kurulum<br>
+                                        .kur tag (TAG)<br>
+                                        .kur otoisim (İsim | Yaş)<br>
+                                        Kanal Kurulum<br>
+                                        .kur sohbetkanal #chat<br>
+                                        .kur hoşgeldinkanal #registerkanal<br>
+                                        .kur invitekanal #invitekanal<br>
+                                        .kur rules #kurallar<br>
+                                        .kur taglog #taglog<br>
+                                        .kur boosterkanal #boosterkanal<br>
+                                        .kur kayıtlog #kayıtlog<br>
+                                        .kur kayıtsızlog #kayıtsızlog<br>
+                                        .kur basvurulog #basvurulog<br>
+                                        .kur şüphelilog #şüphelilog<br>
+                                        .kur permlog #permlog<br>
+                                        .kur mutelog #mutelog<br>
+                                        .kur banlog #banlog<br>
+                                        .kur jaillog #jaillog<br>
+                                        Rol Kurulum<br>
+                                        .kur erkek @erkekrol<br>
+                                        .kur kadın @kadınrol<br>
+                                        .kur kayıtcı @kayıtcırolü<br>
+                                        .kur şüpheli @şüphelirol<br>
+                                        .kur kayıtsız @kayıtsızrolü<br>
+                                        .kur tagrol @Tagrol<br>
+                                        .kur boost @boostrol<br>
+                                        .kur vip @Viprolu<br>
+                                        .kur müzisyen @müzisyenrolu<br>
+                                        .kur tasarımcı @tasarımcırolu<br>
+                                        .kur streamer @streamerrolu<br>
+                                        .kur sorunçözücü @sorunçözücürolu<br>
+                                        .kur kurucurolleri @kurucurolleri<br>
+                                        .kur banHammer @banHammer<br>
+                                        .kur jailHammer @jailHammer<br>
+                                        .kur muteHammer @muteHammer<br>
+                                        .kur cezaliRole @cezaliRole<br>
+                                        .kur yetkilialım @yetkilialım<br>
+                                        .kur yenistaff @İlkYetkiRolleri<br>
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush mt-2" id="başvurupanel">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fbaşvurupanel">
+                                    .başvurupanel &nbsp; <span class="command-descreption">- Yetkili başvuru panel.
+                                    </span>
+                                </button>
+                            </h2>
+                            <div id="fbaşvurupanel" class="accordion-collapse collapse" data-bs-parent="#başvurupanel">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .başvurupanel 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush mt-2" id="menü">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fmenü">
+                                    .menü &nbsp; <span class="command-descreption">- Rol menüyü kurar.
+                                    </span>
+                                </button>
+                            </h2>
+                            <div id="fmenü" class="accordion-collapse collapse" data-bs-parent="#menü">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .menü 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="accordion accordion-flush mt-2" id="menürol">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#fmenürol">
+                                .menürol &nbsp; <span class="command-descreption">- Menüdeki Gerekli Rolları Kurar
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="fmenürol" class="accordion-collapse collapse" data-bs-parent="#menürol">
+                            <div class="accordion-body">
+                                <span>Kullanım Örnekleri:</span> <br />
+                                <span class="examples">
+
+                                    .menürol 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                
+                <div class="accordion accordion-flush mt-2" id="kilit">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#fkilit">
+                                .kilit &nbsp; <span class="command-descreption">- Chat kanallarını kitlemeye yarar
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="fkilit" class="accordion-collapse collapse" data-bs-parent="#kilit">
+                            <div class="accordion-body">
+                                <span>Kullanım Örnekleri:</span> <br />
+                                <span class="examples">
+
+                                    .kilit 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion accordion-flush mt-2" id="otokayıtpanel">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#fotokayıtpanel">
+                                .otokayıtpanel &nbsp; <span class="command-descreption">- Luna bot ile daha önce başka sunucularda kayıt olanlar teyitsiz bir şekilde yapay zeka ile kayıt olur
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="fotokayıtpanel" class="accordion-collapse collapse" data-bs-parent="#otokayıtpanel">
+                            <div class="accordion-body">
+                                <span>Kullanım Örnekleri:</span> <br />
+                                <span class="examples">
+
+                                    .otokayıtpanel 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush mt-2" id="şüphelibutton">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#fşüphelibutton">
+                                .şüphelibutton &nbsp; <span class="command-descreption">-  7 gün içeresinde açılan hesapları kabul etmemektedir.
+                                </span>
+                            </button>
+                        </h2>
+                        <div id="fşüphelibutton" class="accordion-collapse collapse" data-bs-parent="#şüphelibutton">
+                            <div class="accordion-body">
+                                <span>Kullanım Örnekleri:</span> <br />
+                                <span class="examples">
+
+                                    .şüphelibutton 
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                    <div class="accordion accordion-flush mt-2" id="yetkilisay">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fyetkilisay">
+                                    .yetkilisay &nbsp; <span class="command-descreption">- Aktif olup Sesli kanallarda olmayan yetkilileri etiketler.
+                                    </span>
+                                </button>
+                            </h2>
+                            <div id="fyetkilisay" class="accordion-collapse collapse" data-bs-parent="#yetkilisay">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .yetkilisay 
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="accordion accordion-flush mt-2" id="slowmode">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#fslowmode">
+                                    
+                                    .tagsay&nbsp; <span class="command-descreption">- Sunucu tagında ka. üye var olduğunu gösterir
+                                        channel</span>
+                                </button>
+                            </h2>
+                            <div id="fslowmode" class="accordion-collapse collapse" data-bs-parent="#slowmode">
+                                <div class="accordion-body">
+                                    <span>Kullanım Örnekleri:</span> <br />
+                                    <span class="examples">
+
+                                        .tagsay
+
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <div class="footer-clean bg-dark">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Quick access</h3>
+                        <ul>
+                            <li><a href="#Features">Features</a></li>
+                            <li><a href="#Statics">Statics</a></li>
+                            <li><a href="#FAQ">Ask me</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="./pages/commands.html">Commands</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">License</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="https://discord.gg/lunabots">Support server</a></li>
+                            <li><a href="https://discord.com/oauth2/authorize?client_id=964617291503370352&permissions=8&scope=bot">Invite bot</a></li>
+                            <li><a href="https://github.com/TheMacDeveloper">Github</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 item social"><a href="https://discord.gg/lunabots"><ion-icon name="logo-discord">
+
+                    </ion-icon></a>
+                                <a href="https://www.instagram.com/macallan.js/?hl=tr"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <p class="copyright">Luna Bot © 2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="page-footer font-small text-light mt-5">
+                <div class="footer-copyright text-center">
+                    <a href="https://github.com/TheMacDeveloper">Macallan</a> tarafından 💖 ile yapılmıştır
+            
+                    © 2022 Telif hakkı
+                  </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <input id="commands"
+        value="[{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-gift ttt&#39;&gt;&lt;/i&gt;&amp;nbsp; Moderation Commands&#34;,&#34;commands&#34;:[&#34;ban&#34;,&#34;kick&#34;,&#34;mute&#34;]},{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-globe-europe ttt&#39;&gt;&lt;/i&gt;&amp;nbsp; General Commands&#34;,&#34;commands&#34;:[&#34;help&#34;,&#34;ping&#34;,&#34;invite&#34;]},{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-hammer-war ttt&#39;&gt;&lt;/i&gt;&amp;nbsp;&amp;nbsp; Leveling Commands&#34;,&#34;commands&#34;:[&#34;leaderboard&#34;]},{&#34;title&#34;:&#34;&lt;i class=&#39;fas fas fa-crown ttt&#39;&gt;&lt;/i&gt;&amp;nbsp; Kurucu Komutları&#34;,&#34;commands&#34;:[&#34;reactionrole&#34;,&#34;slowmode&#34;]}]"
+        hidden />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/fontawesome/all.min.js"></script>
+    <script src="/js/animation.js"></script>
+    <script>
+        function active(elm) {
+            document.getElementById("CategoryBtnAll").classList.remove("active");
+
+            document.getElementById("CategoryBtn0").classList.remove("active");
+            document.getElementById("Category0").setAttribute("hidden", "");
+
+            document.getElementById("CategoryBtn1").classList.remove("active");
+            document.getElementById("Category1").setAttribute("hidden", "");
+
+            document.getElementById("CategoryBtn2").classList.remove("active");
+            document.getElementById("Category2").setAttribute("hidden", "");
+
+            document.getElementById("CategoryBtn3").classList.remove("active");
+            document.getElementById("Category3").setAttribute("hidden", "");
+
+            elm.classList.add("active");
+            if (elm.id.replace("CategoryBtn", "") == "All") {
+
+                document.getElementById("Category0").removeAttribute("hidden");
+
+                document.getElementById("Category1").removeAttribute("hidden");
+
+                document.getElementById("Category2").removeAttribute("hidden");
+
+                document.getElementById("Category3").removeAttribute("hidden");
+
+            } else {
+                document.getElementById("Category" + elm.id.replace("CategoryBtn", "")).removeAttribute("hidden");
+            }
+        }
+        document.getElementById("CategoryBtnAll").click();
+        function search(arg) {
+            let commands = JSON.parse(document.getElementById("commands").value);
+            let cmds = [];
+            commands.forEach(category => {
+                category.commands.forEach(command => {
+                    cmds.push(command);
+                })
+            })
+            let existedCmds = cmds.filter(obj => obj.includes(arg.toLowerCase()));
+            cmds.forEach(cmd => {
+                document.getElementById(cmd).setAttribute("hidden", "");
+            })
+            existedCmds.forEach(cmd => {
+                document.getElementById(cmd).removeAttribute("hidden");
+            })
+        }
+    </script>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>
